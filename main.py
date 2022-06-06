@@ -18,8 +18,10 @@ apiii = json.loads(api.text) #載入API
 
 while True:
     m = time.strftime("%M",time.localtime())
-    if m == 59:
+    print(m)
+    if m == "59":
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print(now+"紀錄中 請稍侯...")
 
         #更改excel檔案
         with open ("system.json",mode="r",encoding="utf-8") as filt:
@@ -42,4 +44,5 @@ while True:
         with open ("system.json",mode="w",encoding="utf-8") as filt:
             datas = {"time":wheretime,"status":wherestatus,"online":whereonline}
             json.dump(datas,filt)
+        print(now+"紀錄完成")
         time.sleep(61)
