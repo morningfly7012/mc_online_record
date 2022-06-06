@@ -18,7 +18,6 @@ apiii = json.loads(api.text) #載入API
 
 while True:
     m = time.strftime("%M",time.localtime())
-    print(m)
     if m == "59":
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print(now+"紀錄中 請稍侯...")
