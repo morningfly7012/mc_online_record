@@ -18,10 +18,11 @@ apiii = json.loads(api.text) #載入API
 
 while True:
     m = time.strftime("%M",time.localtime())
-    if m == "59":
+    if m == "59" or m == "16" or m == "31" or m == "46":
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print(now+"紀錄中 請稍侯...")
-
+        api = requests.get("https://api.mcsrvstat.us/2/"+ipp) #設定API
+        apiii = json.loads(api.text) #載入API
         #更改excel檔案
         with open ("system.json",mode="r",encoding="utf-8") as filt:
             data = json.load(filt)     
