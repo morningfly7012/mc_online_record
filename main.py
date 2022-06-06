@@ -18,7 +18,7 @@ apiii = json.loads(api.text) #載入API
 
 while True:
     m = time.strftime("%M",time.localtime())
-    if m == 00:
+    if m == 59:
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         #更改excel檔案
