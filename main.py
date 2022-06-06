@@ -42,3 +42,4 @@ while True:
         with open ("system.json",mode="w",encoding="utf-8") as filt:
             datas = {"time":wheretime,"status":wherestatus,"online":whereonline}
             json.dump(datas,filt)
+        time.sleep(61)
