@@ -18,7 +18,7 @@ apiii = json.loads(api.text) #載入API
 
 while True:
     m = time.strftime("%M",time.localtime())
-    if m == "59" or m == "16" or m == "31" or m == "46":
+    if m == "59":
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print(now+"紀錄中 請稍侯...")
         api = requests.get("https://api.mcsrvstat.us/2/"+ipp) #設定API
